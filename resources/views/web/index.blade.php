@@ -22,6 +22,9 @@
                     <div class="col-12">
                         <p class="samuraimart-product-label mt-2">
                             {{ $recommend_product->name }}<br>
+                            @if ()
+
+                            @endif
                             <label>￥{{ $recommend_product->price }}</label>
                         </p>
                     </div>
@@ -52,6 +55,9 @@
                         <div class="col-12">
                             <p class="samuraimart-product-label mt-2">
                                 {{ $recently_product->name }}<br>
+                                @if ()
+                                    <img src="{{ asset($recently_product->image) }}" class="img-thumbnail">
+                                @endif
                                 <label>￥{{ $recently_product->price }}</label>
                             </p>
                         </div>

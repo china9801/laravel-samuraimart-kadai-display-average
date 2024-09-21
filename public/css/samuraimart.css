@@ -182,3 +182,69 @@ label {
   color: #ffffff;
   background-color: #d94b0e;
 }
+
+.samuraimart-star-rating {
+  position: relative;
+  display: inline-block;
+  color: #b2b2b2;
+
+
+}
+
+.samuraimart-star-rating::before {
+  content: "★★★★★";
+}
+
+.samuraimart-star-rating::after {
+  content: "★★★★★";
+  position: absolute;
+  color: #0fbe9f;
+}
+
+
+/* 0.5刻みの場合 */
+.samuraimart-star-rating[data-rate="5"] {
+  width: 100%;
+}
+
+.samuraimart-star-rating[data-rate="4.5"] {
+  width: 90%;
+}
+
+.samuraimart-star-rating[data-rate="4"] {
+  width: 80%;
+}
+
+.samuraimart-star-rating[data-rate="3.5"] {
+  width: 70%;
+}
+
+.samuraimart-star-rating[data-rate="3"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="2.5"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="2"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="1.5"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="1"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="0.5"] {
+  /* 適用するスタイル */
+}
+
+.samuraimart-star-rating[data-rate="0"] {
+  /* 適用するスタイル */
+}
+
+
