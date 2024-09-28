@@ -187,18 +187,28 @@ label {
   position: relative;
   display: inline-block;
   color: #b2b2b2;
-
+  z-index: 0;
 
 }
 
 .samuraimart-star-rating::before {
   content: "★★★★★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gray; /* 背面の色 */
+  z-index: 1; /* 背面の星 */
 }
 
 .samuraimart-star-rating::after {
   content: "★★★★★";
   position: absolute;
   color: #0fbe9f;
+  z-index: 1;
+  overflow: hidden; /* 溢れた部分を隠す */
+  white-space: nowrap; /* 星を横並びに */
+
+
 }
 
 
@@ -246,5 +256,7 @@ label {
 .samuraimart-star-rating[data-rate="0"] {
   /* 適用するスタイル */
 }
+
+
 
 

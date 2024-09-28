@@ -25,6 +25,11 @@
                             @if ()
 
                             @endif
+
+                            <p>
+                            <span class="samuraimart-star-rating" data-rate="{{round($product->reviews->avg('score') * 2) / 2}}"></span>
+                            {{round($product->reviews->avg('score'), 1)}}
+                            </p>
                             <label>￥{{ $recommend_product->price }}</label>
                         </p>
                     </div>
