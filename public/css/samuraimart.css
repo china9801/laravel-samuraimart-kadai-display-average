@@ -188,7 +188,7 @@ label {
   display: inline-block;
   color: #b2b2b2;
   z-index: 0;
-
+  white-space: nowrap;
 }
 
 .samuraimart-star-rating::before {
@@ -196,7 +196,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
-  color: gray; /* 背面の色 */
+  color: #b2b2b2; /* 背面の色 */
   z-index: 1; /* 背面の星 */
 }
 
@@ -207,54 +207,55 @@ label {
   z-index: 1;
   overflow: hidden; /* 溢れた部分を隠す */
   white-space: nowrap; /* 星を横並びに */
-
+  top: 0;
+  left: 0;
 
 }
 
 
 /* 0.5刻みの場合 */
-.samuraimart-star-rating[data-rate="5"] {
+.samuraimart-star-rating[data-rate="5"]::after {
   width: 100%;
 }
 
-.samuraimart-star-rating[data-rate="4.5"] {
+.samuraimart-star-rating[data-rate="4.5"]::after {
   width: 90%;
 }
 
-.samuraimart-star-rating[data-rate="4"] {
+.samuraimart-star-rating[data-rate="4"]::after {
   width: 80%;
 }
 
-.samuraimart-star-rating[data-rate="3.5"] {
+.samuraimart-star-rating[data-rate="3.5"]::after {
   width: 70%;
 }
 
-.samuraimart-star-rating[data-rate="3"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="3"]::after {
+  width: 60%;
 }
 
-.samuraimart-star-rating[data-rate="2.5"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="2.5"]::after {
+  width: 50%;
 }
 
-.samuraimart-star-rating[data-rate="2"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="2"]::after {
+  width: 40%;
 }
 
-.samuraimart-star-rating[data-rate="1.5"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="1.5"]::after {
+  width: 30%;
 }
 
-.samuraimart-star-rating[data-rate="1"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="1"]::after {
+  width: 20%;
 }
 
-.samuraimart-star-rating[data-rate="0.5"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="0.5"]::after {
+  width: 10%;
 }
 
-.samuraimart-star-rating[data-rate="0"] {
-  /* 適用するスタイル */
+.samuraimart-star-rating[data-rate="0"]::after {
+  width: 0%;
 }
 
 
