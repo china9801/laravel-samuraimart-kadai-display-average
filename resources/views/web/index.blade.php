@@ -22,9 +22,6 @@
                     <div class="col-12">
                         <p class="samuraimart-product-label mt-2">
                             {{ $recommend_product->name }}<br>
-                            @if ()
-
-                            @endif
 
                             <p>
                             <span class="samuraimart-star-rating" data-rate="{{round($product->reviews->avg('score') * 2) / 2}}"></span>
