@@ -187,8 +187,8 @@ label {
   position: relative;
   display: inline-block;
   color: #b2b2b2;
-  z-index: 0;
-  white-space: nowrap;
+  width: 5em; /* 5つ星分の幅 */
+  height: 1em; /* 1つ星の高さ */
 }
 
 .samuraimart-star-rating::before {
@@ -196,8 +196,10 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+  display: inline-block;
+  overflow: hidden;
   color: #b2b2b2; /* 背面の色 */
-  z-index: 1; /* 背面の星 */
+  z-index: 0; /* 背面の星 */
 }
 
 .samuraimart-star-rating::after {
@@ -209,6 +211,7 @@ label {
   white-space: nowrap; /* 星を横並びに */
   top: 0;
   left: 0;
+  display: inline-block;
 
 }
 
