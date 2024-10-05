@@ -44,7 +44,7 @@
                 <a href="#">
                     <img src="{{ asset('img/robot-vacuum-cleaner.jpg') }}" class="img-thumbnail">
                 </a>
-                @foreach ($recently_products as $recently_product)
+            @foreach ($recently_products as $recently_product)
                 <div class="col-3">
                     <a href="{{ route('products.show', $recently_product) }}">
                         @if ($recently_product->image !== "")
@@ -57,8 +57,9 @@
                         <div class="col-12">
                             <p class="samuraimart-product-label mt-2">
                                 {{ $recently_product->name }}<br>
-                                @if ()
-                                    <img src="{{ asset($recently_product->image) }}" class="img-thumbnail">
+                                @if ($recently_product->reviews()->exists())
+                                <span class="samuraimart-star-rating" data-rate="{{ round($recently_product->reviews->avg('score') * 2) / 2 }}"></span>
+                                {{ round($recently_product->reviews->avg('score'), 1) }}<br>
                                 @endif
                                 <label>￥{{ $recently_product->price }}</label>
                             </p>
