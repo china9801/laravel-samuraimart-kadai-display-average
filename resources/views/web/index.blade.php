@@ -24,8 +24,8 @@
                             {{ $recommend_product->name }}<br>
 
                             <p>
-                            <span class="samuraimart-star-rating" data-rate="{{round($product->reviews->avg('score') * 2) / 2}}"></span>
-                            {{round($product->reviews->avg('score'), 1)}}
+                            <span class="samuraimart-star-rating" data-rate="{{round($recommend_product->reviews->avg('score') * 2) / 2}}"></span>
+                            {{round($recommend_product->reviews->avg('score'), 1)}}
                             </p>
                             <label>￥{{ $recommend_product->price }}</label>
                         </p>
